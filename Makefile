@@ -7,12 +7,19 @@ add-repo:
 template:
 	helm template \
 		-f values.yml \
+		--release-name "icinga2-stack" \
 		icinga/icinga-stack > generated/all.yml
 
 .PHONY: up
 up:
 	minikube start
 	kubectl apply -f generated/all.yml
+	kubectl apply -f apps.yml
+
+.PHONY: apply
+apply:
+	kubectl apply -f generated/all.yml
+	kubectl apply -f apps.yml
 
 .PHONY: down
 down:
