@@ -1,0 +1,42 @@
+icinga2:
+  config:
+    ticket_salt:
+      value: 'U79IF=4n:h@Mjt0gRs(5#i@9Tmf_Mw+UxPDd-G2Q=Aps2C@z9n'
+
+icingaweb2:
+  auth:
+    admin_user: icingaadmin
+    admin_password:
+      value: password
+
+global:
+  api:
+    users:
+      director:
+        password:
+          value: password
+      icingaweb:
+        password:
+          value: password
+  databases:
+    director:
+      username:
+        value: director
+      password:
+        value: password
+    icingaweb2:
+      username:
+        value: icingaweb2
+      password:
+        value: password
+    icingadb:
+      username:
+        value: icingadb
+      password:
+        value: password
+    kubernetes:
+      username:
+        value: kubernetes
+      password:
+        value: password
+    
